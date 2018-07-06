@@ -18,4 +18,9 @@ class CategoriesController extends Controller
         // 传参变量话题和分类到模板中
         return view('topics.index', compact('topics', 'category'));
     }
+
+    public function create(Topic $topic){
+        $categories = Category::all();
+        return view('topics.create_and_edit',compact('topic','categories'));
+    }
 }
