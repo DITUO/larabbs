@@ -18,4 +18,10 @@ class UserObserver
     {
         //
     }
+
+    public function saving(User $user){
+        if (empty($user->avatar)) {
+            $user->avatar = 'https://fsdhubcdn.phphub.org/uploads/images/201807/10/1_1531206901_dvuqDxgaHg.jpg';
+        }
+    }
 }
